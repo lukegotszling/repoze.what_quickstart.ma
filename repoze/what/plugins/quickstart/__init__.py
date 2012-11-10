@@ -24,14 +24,14 @@ import sys
 import logging
 
 from repoze.who.plugins.auth_tkt import AuthTktCookiePlugin
-from repoze.who.plugins.sa import SQLAlchemyAuthenticatorPlugin, \
+from repoze.who.plugins.ma import SQLAlchemyAuthenticatorPlugin, \
                                   SQLAlchemyUserMDPlugin
 from repoze.who.plugins.friendlyform import FriendlyFormPlugin
 from repoze.who.config import _LEVELS
 from repoze.who.utils import resolveDotted
 
 from repoze.what.middleware import setup_auth
-from repoze.what.plugins.sql import configure_sql_adapters
+from repoze.what.plugins.ma import configure_sql_adapters
 
 
 __all__ = ("setup_sql_auth", "add_auth_from_config",
